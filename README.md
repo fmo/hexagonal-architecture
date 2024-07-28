@@ -1,12 +1,7 @@
 # Definition
 
-Hexagonal architecture, also known as the Ports and Adapters architecture, was popularized by Alistair Cockburn, a prominent software engineer, and author. 
-Alistair Cockburn introduced the concept in the early 2000s to address issues related to maintaining and scaling software systems. 
-His ideas on this architectural style were aimed at making software more modular, easier to test, and adaptable to changes.
-
-The term "hexagonal architecture" came from the visual representation of the architecture, where the central business logic is surrounded by "ports" and "adapters," 
-forming a hexagonal shape. This design pattern emphasizes the separation of concerns, ensuring that the core logic of the application is independent of external factors such as user interfaces, 
-databases, and other external systems.
+Hexagonal architecture, proposed by Alistair Cockburn in 2005, is an architectural pattern that aims to build loosely coupled application components that can be connected via ports and adapters.
+In this pattern, the consumer opens the application at a port via an adapter, and the output is sent through a port to an adapter. 
 
 # Primary (Driving) Actors
 
