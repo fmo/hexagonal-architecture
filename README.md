@@ -15,12 +15,14 @@ An application is a technology-agnostic component that contains the business log
 write and read queries from the ports and sends them to external actors, such as database and third-party services, via ports. A hexagon visually represents multiple port/adapter combinations for
 an application and shows the difference between the left side (or driving side) and right side (or driven side).
 
-## In hexagonal architecture, actors are categorized into primary and secondary actors based on their role in interacting with the system:
+## Actors
 
-Primary Actors: These are the actors that initiate interactions with your application. They represent the entities that use your application's capabilities. Primary actors typically interact with the system via driving adapters (e.g., controllers, API endpoints).
+In hexagonal architecture, actors are categorized into primary and secondary actors based on their role in interacting with the system:
+
+<b>Primary Actors:</b> These are the actors that initiate interactions with your application. They represent the entities that use your application's capabilities. Primary actors typically interact with the system via driving adapters (e.g., controllers, API endpoints).
 
 Example: A user submitting a form through a web interface or an external system making an API call.
 
-Secondary Actors: These are external systems or services that your application interacts with to perform certain operations. Secondary actors are accessed through driven adapters (e.g., database connections, external APIs, message queues).
+<b>Secondary Actors:</b> These are external systems or services that your application interacts with to perform certain operations. Secondary actors are accessed through driven adapters (e.g., database connections, external APIs, message queues).
 
 Example: A database where the application stores data, a payment gateway the app uses to process payments, or RabbitMQ for sending/receiving messages.
