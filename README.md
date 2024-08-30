@@ -26,3 +26,12 @@ Example: A user submitting a form through a web interface or an external system 
 <b>Secondary Actors:</b> These are external systems or services that your application interacts with to perform certain operations. Secondary actors are accessed through driven adapters (e.g., database connections, external APIs, message queues).
 
 Example: A database where the application stores data, a payment gateway the app uses to process payments, or RabbitMQ for sending/receiving messages.
+
+## Ports
+
+In Hexagonal Architecture (also known as Ports and Adapters), the term "ports" refers to the interfaces or abstractions that define the core business functionality of an application. Ports are essentially the points through which external systems (e.g., user interfaces, databases, APIs) interact with the core domain logic of the application.
+
+There are two types of ports:
+
+<p>Inbound Ports: These allow external systems to interact with the application (e.g., service interfaces, controller methods). They represent how the core application is "driven" by outside forces.</p>
+<p>Outbound Ports: These allow the application to interact with external systems (e.g., repositories, third-party services). They represent how the core application "drives" external systems.</p>
