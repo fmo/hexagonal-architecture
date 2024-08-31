@@ -14,7 +14,7 @@ func NewOrderController(service domain.OrderService) *OrderController {
 	return &OrderController{service: service}
 }
 
-func (C *OrderController) HandlePlaceOrder(w http.ResponseWriter, r *http.Request) {
+func (c *OrderController) HandlePlaceOrder(w http.ResponseWriter, r *http.Request) {
 	var order domain.Order
 	err := json.NewDecoder(r.Body).Decode(&order)
 	if err != nil {
