@@ -35,3 +35,11 @@ There are two types of ports:
 
 <p>Inbound Ports: These allow external systems to interact with the application (e.g., service interfaces, controller methods). They represent how the core application is "driven" by outside forces.</p>
 <p>Outbound Ports: These allow the application to interact with external systems (e.g., repositories, third-party services). They represent how the core application "drives" external systems.</p>
+
+## Dependencies
+
+In hexagonal architecture, outer layers depend on inner layers, which makes it easier to implement the application core first and then implement outer layers to depend on them.
+
+## Lower level vs higher level
+
+Low level considered as inner levels which is mainly domain layer. And high level is outer level adapters like database or message queue implementation details. (3rd party)
