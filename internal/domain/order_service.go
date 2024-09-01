@@ -1,7 +1,6 @@
-package srv
+package domain
 
 import (
-	"github.com/fmo/hexagonal-architecture/internal/domain"
 	"github.com/fmo/hexagonal-architecture/internal/ports"
 )
 
@@ -13,10 +12,10 @@ func NewOrderService(repo ports.OrderRepository) *OrderServiceImpl {
 	return &OrderServiceImpl{repo: repo}
 }
 
-func (s *OrderServiceImpl) PlaceOrder(order domain.Order) error {
+func (s *OrderServiceImpl) PlaceOrder(order Order) error {
 	return s.repo.Save(order)
 }
 
-func (s *OrderServiceImpl) GetOrder(id string) (domain.Order, error) {
+func (s *OrderServiceImpl) GetOrder(id string) (Order, error) {
 	return s.repo.FindByID(id)
 }

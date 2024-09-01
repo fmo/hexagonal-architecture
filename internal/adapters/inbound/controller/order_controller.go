@@ -3,14 +3,15 @@ package controller
 import (
 	"encoding/json"
 	"github.com/fmo/hexagonal-architecture/internal/domain"
+	"github.com/fmo/hexagonal-architecture/internal/ports"
 	"net/http"
 )
 
 type OrderController struct {
-	service domain.OrderService
+	service ports.OrderService
 }
 
-func NewOrderController(service domain.OrderService) *OrderController {
+func NewOrderController(service ports.OrderService) *OrderController {
 	return &OrderController{service: service}
 }
 

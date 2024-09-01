@@ -4,14 +4,14 @@ import (
 	"database/sql"
 	"github.com/fmo/hexagonal-architecture/internal/adapters/inbound/controller"
 	"github.com/fmo/hexagonal-architecture/internal/adapters/outbound/db"
-	"github.com/fmo/hexagonal-architecture/internal/domain/srv"
+	"github.com/fmo/hexagonal-architecture/internal/domain"
 	"net/http"
 )
 
 func SetupApplication(database *sql.DB) http.Handler {
 	repository := db.NewSqlOrderRepository(database)
 
-	service := srv.NewOrderService(repository)
+	service := domain.NewOrderService(repository)
 
 	orderController := controller.NewOrderController(service)
 
