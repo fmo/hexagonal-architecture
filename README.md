@@ -36,6 +36,11 @@ There are two types of ports:
 <p>Inbound Ports: These allow external systems to interact with the application (e.g., service interfaces, controller methods). They represent how the core application is "driven" by outside forces.</p>
 <p>Outbound Ports: These allow the application to interact with external systems (e.g., repositories, third-party services). They represent how the core application "drives" external systems.</p>
 
+## Adapters
+
+Adapters deal primarily with transforming a request from an actor to an application, and vice versa. Data transformation helps the application undestand the requests that come from actors. For example, a specific driver adapter can transform a techonogly-specific request into a call to an application service. In the same way, a driven adapter can covert a technology-agnostic request
+from the application into a technology-specific request on the driven port.
+
 ## Dependencies
 
 In hexagonal architecture, outer layers depend on inner layers, which makes it easier to implement the application core first and then implement outer layers to depend on them.
