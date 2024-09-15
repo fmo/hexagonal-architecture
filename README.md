@@ -2,7 +2,8 @@
 
 https://alistair.cockburn.us/hexagonal-architecture/
 
-<img width="709" alt="Screenshot 2024-08-28 at 10 41 09" src="https://github.com/user-attachments/assets/2fa6ff50-f076-42cb-8ba1-86e2fa3f823f">
+<img width="691" alt="Screenshot 2024-09-15 at 12 41 06" src="https://github.com/user-attachments/assets/ece83695-76ba-4534-9834-932513474277">
+
 
 ## Definition
 
